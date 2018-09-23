@@ -71,7 +71,7 @@ async def say(ctx):
 @client.command(pass_context=True)
 async def rolldice(ctx):
 	msg = ctx.message
-	await client.send_message(msg.channel, "%s, you rolled a **%s**!" % (msg.mentions[0].mention,random.randint(1,6)))	
+	await client.send_message(msg.channel, "%s, you rolled a **%s**!" % (msg.author.mention,random.randint(1,6)))	
 				
 				
 
