@@ -82,6 +82,5 @@ async def flipcoin(ctx):
 	else:
 		side = "Tails"
 	await client.send_message(msg.channel, "%s, The coin landed on **%s**!" % (msg.author.mention,side))	
-				
 
 client.run("NDkyOTgxMzYzNTMyNjI3OTgz.DoeUoA.Rn4va2FkKhUqlog_H-b-CzRMy14")
