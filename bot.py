@@ -7,7 +7,7 @@ from discord.ext import commands
 import asyncio
 import time
 
-os.chdir(r'C:\Users\PC\Desktop\PyBot\botData')
+#os.chdir(r'C:\Users\PC\Desktop\PyBot\botData')
 
 Client = discord.Client() #Initialise Client 
 client = commands.Bot(command_prefix = "!") #Initialise client bot
@@ -20,15 +20,15 @@ async def on_ready():
 	
 	await client.change_presence(game=discord.Game(name="PyBot | !help"))
 
-@client.event
-async def on_member_join(member):
-	with open('users.json', 'r') as f:
-		users = json.load(f)
+#@client.event
+#async def on_member_join(member):
+	#with open('users.json', 'r') as f:
+		#users = json.load(f)
 		
-	await update_data(users, member)
+	#await update_data(users, member)
 	
-	with open('users.json', 'w') as f:
-		json.dump(users, f)
+	#with open('users.json', 'w') as f:
+		#json.dump(users, f)
 	
 @client.command(pass_context=True)
 async def help(ctx):
