@@ -1,6 +1,7 @@
 import discord
 import os
 import json
+import random
 
 from discord.ext.commands import Bot
 from discord.ext import commands
@@ -66,6 +67,11 @@ async def say(ctx):
 			if msg.mentions[0].mention ==  args[0]:
 				print("Syntax Correct")
 				await client.send_message(msg.channel, "Waiting on Records from %s" % (msg.mentions[0].mention))
+
+@client.command(pass_context=True)
+async def rolldice(ctx):
+	msg = ctx.message
+	await client.send_message(msg.channel, "%s, you rolled a **%s**!" % (msg.mentions[0].mention,random.randint(1,6)))	
 				
 				
 
