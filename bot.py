@@ -72,7 +72,16 @@ async def say(ctx):
 async def rolldice(ctx):
 	msg = ctx.message
 	await client.send_message(msg.channel, "%s, you rolled a **%s**!" % (msg.author.mention,random.randint(1,6)))	
-				
+
+@client.command(pass_context=True)
+async def flipcoin(ctx):
+	msg = ctx.message
+	side = "Heads"
+	if random.randint(1,2) == 1:
+		side = "Heads"
+	esle:
+		side = "Tails"
+	await client.send_message(msg.channel, "%s, The coin landed on **%s**!" % (msg.author.mention,side))	
 				
 
 client.run("NDkyOTgxMzYzNTMyNjI3OTgz.DoeUoA.Rn4va2FkKhUqlog_H-b-CzRMy14")
