@@ -79,7 +79,7 @@ async def flipcoin(ctx):
 	side = "Heads"
 	if random.randint(1,2) == 1:
 		side = "Heads"
-	esle:
+	else:
 		side = "Tails"
 	await client.send_message(msg.channel, "%s, The coin landed on **%s**!" % (msg.author.mention,side))	
 				
