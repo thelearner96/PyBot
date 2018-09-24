@@ -8,7 +8,7 @@ from discord.ext import commands
 import asyncio
 import time
 
-import FunCommands
+import modules/FunCommands
 
 #os.chdir(r'C:\Users\PC\Desktop\PyBot\botData')
 
