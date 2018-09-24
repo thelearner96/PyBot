@@ -87,14 +87,14 @@ async def flipcoin(ctx):
 async def truth(ctx):
 	msg = ctx.message
 	answers = [
-		"No";
-		"Nope";
-		"No Way";
-		"Yes";
-		"100%";
-		"Definitely";
-		"Of Course";
-		"Im not sure";
+		"No",
+		"Nope",
+		"No Way",
+		"Yes",
+		"100%",
+		"Definitely",
+		"Of Course",
+		"Im not sure",
 		"What are you talking about"
 	]
 	answer = answers[random.randint(0,len(answers))]
