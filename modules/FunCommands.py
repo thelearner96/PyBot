@@ -9,8 +9,6 @@ import asyncio
 import time
 
 class Funcommands:
-	def __init__:
-		Pass
 	
 	@commands.command(name="hi",pass_context=True)
 	async def hi(ctx):
