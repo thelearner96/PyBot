@@ -15,6 +15,17 @@ client = commands.Bot(command_prefix = "!") #Initialise client bot
 
 client.remove_command('help')
 
+def load_plugins():
+    for p in os.listdir("plugins"):
+        if p.endswith(".py"):
+            p = p.rstrip(".py")
+            try:
+                bot.load_extension(f'plugins.{p}')
+                plugins.append(p)
+            except Exception as error:
+                exc = "{0}: {1}".format(type(error).__name__, error)
+                log.warning(f"Failed to load plugin {p}:\n    {exc}")
+
 @client.event
 async def on_ready():
 	print("bot now ready...")
