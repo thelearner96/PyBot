@@ -84,7 +84,7 @@ async def flipcoin(ctx):
 	await client.send_message(msg.channel, "%s, The coin landed on **%s**!" % (msg.author.mention,side))
 	
 @client.command(pass_context=True)
-async def 8ball(ctx):
+async def truth(ctx):
 	msg = ctx.message
 	answers = [
 		"No";
