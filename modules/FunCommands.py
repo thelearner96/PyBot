@@ -8,7 +8,7 @@ from discord.ext import commands
 import asyncio
 import time
 
-Class Funcommands:
+class Funcommands:
 	def __init__:
 		Pass
 	
