@@ -38,7 +38,11 @@ async def help(ctx):
 	)
 	
 	embed.set_author(name="A list of PyBot Commands")
+	embed.add_field(name='!help', value='Shows this list.', inline=False)
 	embed.add_field(name='!ping', value='Returns "Pong"', inline=False)
+	embed.add_field(name='!say <message>', value='Make the bot say something', inline=False)
+	embed.add_field(name='!rolldice', value='Roll a Dice', inline=False)
+	embed.add_field(name='!flipcoin', value='Flip a Coin', inline=False)
 	
 	await client.send_message(ctx.message.author, embed=embed)
 	
