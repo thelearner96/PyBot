@@ -8,8 +8,6 @@ from discord.ext import commands
 import asyncio
 import time
 
-import modules/FunCommands
-
 #os.chdir(r'C:\Users\PC\Desktop\PyBot\botData')
 
 Client = discord.Client() #Initialise Client 
@@ -83,6 +81,23 @@ async def flipcoin(ctx):
 		side = "Heads"
 	else:
 		side = "Tails"
-	await client.send_message(msg.channel, "%s, The coin landed on **%s**!" % (msg.author.mention,side))	
+	await client.send_message(msg.channel, "%s, The coin landed on **%s**!" % (msg.author.mention,side))
+	
+@client.command(pass_context=True)
+async def 8ball(ctx):
+	msg = ctx.message
+	answers = [
+		"No";
+		"Nope";
+		"No Way";
+		"Yes";
+		"100%";
+		"Definitely";
+		"Of Course";
+		"Im not sure";
+		"What are you talking about"
+	]
+	answer = answers[random.randint(0,len(answers))]
+	await client.send_message(msg.channel, "%s, %s" % (msg.author.mention, answer))
 
 client.run("NDkyOTgxMzYzNTMyNjI3OTgz.DoeUoA.Rn4va2FkKhUqlog_H-b-CzRMy14")
